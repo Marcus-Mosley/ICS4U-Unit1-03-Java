@@ -19,6 +19,8 @@ public class EnergyBonus {
   * Kiloton Bombs would release that energy.
   */
   public static void main(String[] args) {
+    final double lightspeed = 299792458;
+    final double kiloton = (4 * Math.pow(10, 12));
     double mass = 0;
     while (true) {
       try {
@@ -30,12 +32,12 @@ public class EnergyBonus {
           break;
         }
       } catch (Exception e) {
-        System.out.printf("That is not a number, please input a number!");
+        System.out.printf("That is not a number, please input a number! \n");
       }
     }
     // Process
-    double energy = mass * Math.pow(299792458.0, 2.0);
-    double bombs = energy / (4 * Math.pow(10, 12));
+    double energy = mass * Math.pow(lightspeed, 2.0);
+    double bombs = energy / kiloton;
 
     // Output
     System.out.printf("That object could release %7.4e Joules of energy. \n",

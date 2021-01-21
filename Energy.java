@@ -17,6 +17,7 @@ public class Energy {
   * from an object of a certain mass.
   */
   public static void main(String[] args) {
+    final double lightspeed = 299792458;
     double mass = 0;
     while (true) {
       try {
@@ -28,11 +29,11 @@ public class Energy {
           break;
         }
       } catch (Exception e) {
-        System.out.printf("That is not a number, please input a number!");
+        System.out.printf("That is not a number, please input a number! \n");
       }
     }
     // Process
-    double energy = mass * Math.pow(299792458.0, 2.0);
+    double energy = mass * Math.pow(lightspeed, 2.0);
 
     // Output
     System.out.printf("That object could release %7.4e Joules of energy.", new Object[] {energy});
